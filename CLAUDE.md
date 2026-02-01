@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Kotlin Multiplatform (KMP) project targeting Android and iOS using Compose Multiplatform for shared UI code. The project is in early stages with a basic "Hello World" implementation.
+This is a Kotlin Multiplatform (KMP) project targeting Android and iOS using Compose Multiplatform for shared UI code. It's a workout tracking app in early stages (scaffolding complete, features not yet implemented). See `TODO.md` for the phased project roadmap.
 
 Package namespace: `de.niilz.kmp.workoutlog`
 
@@ -38,6 +38,12 @@ Run all tests:
 Run tests for a specific platform:
 ```bash
 ./gradlew :composeApp:testDebugUnitTest  # Android
+./gradlew :composeApp:iosSimulatorArm64Test  # iOS simulator
+```
+
+Run a single test class:
+```bash
+./gradlew :composeApp:testDebugUnitTest --tests "de.niilz.kmp.workoutlog.SomeTest"
 ```
 
 ## Architecture
@@ -68,6 +74,10 @@ When adding platform-specific functionality:
 
 - Target Android SDK: 36 (minimum SDK 24)
 - Kotlin version: 2.3.0
+- AGP: 9.0.0
 - Compose Multiplatform version: 1.10.0
 - JVM target: Java 11
+- iOS targets: `iosArm64` and `iosSimulatorArm64` only (no x86 simulator support)
 - iOS framework is built as a static framework (see `composeApp/build.gradle.kts:24`)
+- All dependency versions are managed in `gradle/libs.versions.toml`
+- Single module project (`:composeApp`) — no separate shared/domain modules yet
