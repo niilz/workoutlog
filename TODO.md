@@ -3,23 +3,41 @@
 ## Phase 1: MVP - Core Functionality
 
 ### Exercise Management
-- [ ] Create Exercise data model (Name, Weight, Reps, Description, Date Added)
+- [x] Create Exercise data model (Name, Weight, Reps, Description, Date Added)
 - [ ] Implement local database for exercise storage
-- [ ] Build "Add Exercise" screen/dialog
-- [ ] Implement exercise CRUD operations
+- [x] Build "Add Exercise" screen/dialog
+- [x] Implement exercise CRUD operations
 
 ### Main Workout Screen
-- [ ] Design TODO-like workout list UI
-- [ ] Display exercises with checkboxes
-- [ ] Implement check-off functionality
+- [x] Design TODO-like workout list UI
+- [x] Display exercises with checkboxes
+- [x] Implement check-off functionality
 - [ ] Persist completion state
-- [ ] Add visual feedback for completed exercises
+- [x] Add visual feedback for completed exercises
 
 ### Basic UI/UX
-- [ ] Set up navigation structure
-- [ ] Design consistent UI theme
-- [ ] Implement responsive layouts for both platforms
+- [x] Set up navigation structure
+- [x] Design consistent UI theme
+- [x] Implement responsive layouts for both platforms
 - [ ] Add basic error handling and user feedback
+
+### Unit Tests
+#### WorkoutViewModel - Workout CRUD
+- [x] `addWorkout` appends a new workout to the list
+- [x] `getWorkoutById` returns the correct workout (and null for unknown id)
+- [x] `updateWorkout` renames the correct workout without affecting others
+- [x] `deleteWorkout` removes only the targeted workout
+
+#### WorkoutViewModel - Exercise CRUD
+- [x] `addExercise` appends an exercise to the correct workout
+- [x] `addExercise` assigns a new unique id to the exercise
+- [x] `updateExercise` replaces the correct exercise within the correct workout
+- [x] `deleteExercise` removes only the targeted exercise from the correct workout
+
+#### WorkoutViewModel - Completion & Queries
+- [x] `toggleExerciseComplete` flips completed from false to true and back
+- [x] `toggleExerciseComplete` only affects the targeted exercise
+- [x] `getAllUniqueExercises` returns distinct exercises by name across all workouts
 
 ## Phase 2: Secondary Features
 
@@ -30,9 +48,9 @@
 - [ ] Add date range filtering
 
 ### Workout Design
-- [ ] Create Workout data model (collection of exercises)
-- [ ] Build "Workout Design" screen
-- [ ] Allow creating/editing/deleting workout plans
+- [x] Create Workout data model (collection of exercises)
+- [x] Build "Workout Design" screen
+- [x] Allow creating/editing/deleting workout plans
 - [ ] Implement workout templates (split-training, all-body, etc.)
 
 ### Workout Integration

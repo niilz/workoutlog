@@ -3,7 +3,7 @@ package de.niilz.kmp.workoutlog.data
 import de.niilz.kmp.workoutlog.model.Exercise
 import de.niilz.kmp.workoutlog.model.Workout
 
-val mockWorkouts = listOf(
+val defaultWorkouts = listOf(
     Workout(
         id = "1",
         name = "Upper Body Strength",
