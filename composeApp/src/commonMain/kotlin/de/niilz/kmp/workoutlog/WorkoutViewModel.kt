@@ -1,7 +1,7 @@
 package de.niilz.kmp.workoutlog
 
 import androidx.lifecycle.ViewModel
-import de.niilz.kmp.workoutlog.data.mockWorkouts
+import de.niilz.kmp.workoutlog.data.defaultWorkouts
 import de.niilz.kmp.workoutlog.model.Exercise
 import de.niilz.kmp.workoutlog.model.Workout
 import de.niilz.kmp.workoutlog.model.generateId
@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
 class WorkoutViewModel : ViewModel() {
-    private val _workouts = MutableStateFlow(mockWorkouts)
+    private val _workouts = MutableStateFlow(defaultWorkouts)
     val workouts: StateFlow<List<Workout>> = _workouts.asStateFlow()
 
     fun getWorkoutById(id: String): Workout? =
