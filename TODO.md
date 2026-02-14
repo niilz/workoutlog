@@ -21,6 +21,24 @@
 - [x] Implement responsive layouts for both platforms
 - [ ] Add basic error handling and user feedback
 
+### Unit Tests
+#### WorkoutViewModel - Workout CRUD
+- [ ] `addWorkout` appends a new workout to the list
+- [ ] `getWorkoutById` returns the correct workout (and null for unknown id)
+- [ ] `updateWorkout` renames the correct workout without affecting others
+- [ ] `deleteWorkout` removes only the targeted workout
+
+#### WorkoutViewModel - Exercise CRUD
+- [ ] `addExercise` appends an exercise to the correct workout
+- [ ] `addExercise` assigns a new unique id to the exercise
+- [ ] `updateExercise` replaces the correct exercise within the correct workout
+- [ ] `deleteExercise` removes only the targeted exercise from the correct workout
+
+#### WorkoutViewModel - Completion & Queries
+- [ ] `toggleExerciseComplete` flips completed from false to true and back
+- [ ] `toggleExerciseComplete` only affects the targeted exercise
+- [ ] `getAllUniqueExercises` returns distinct exercises by name across all workouts
+
 ## Phase 2: Secondary Features
 
 ### Statistics Screen
