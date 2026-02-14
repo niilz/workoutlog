@@ -23,21 +23,21 @@
 
 ### Unit Tests
 #### WorkoutViewModel - Workout CRUD
-- [ ] `addWorkout` appends a new workout to the list
-- [ ] `getWorkoutById` returns the correct workout (and null for unknown id)
-- [ ] `updateWorkout` renames the correct workout without affecting others
-- [ ] `deleteWorkout` removes only the targeted workout
+- [x] `addWorkout` appends a new workout to the list
+- [x] `getWorkoutById` returns the correct workout (and null for unknown id)
+- [x] `updateWorkout` renames the correct workout without affecting others
+- [x] `deleteWorkout` removes only the targeted workout
 
 #### WorkoutViewModel - Exercise CRUD
-- [ ] `addExercise` appends an exercise to the correct workout
-- [ ] `addExercise` assigns a new unique id to the exercise
-- [ ] `updateExercise` replaces the correct exercise within the correct workout
-- [ ] `deleteExercise` removes only the targeted exercise from the correct workout
+- [x] `addExercise` appends an exercise to the correct workout
+- [x] `addExercise` assigns a new unique id to the exercise
+- [x] `updateExercise` replaces the correct exercise within the correct workout
+- [x] `deleteExercise` removes only the targeted exercise from the correct workout
 
 #### WorkoutViewModel - Completion & Queries
-- [ ] `toggleExerciseComplete` flips completed from false to true and back
-- [ ] `toggleExerciseComplete` only affects the targeted exercise
-- [ ] `getAllUniqueExercises` returns distinct exercises by name across all workouts
+- [x] `toggleExerciseComplete` flips completed from false to true and back
+- [x] `toggleExerciseComplete` only affects the targeted exercise
+- [x] `getAllUniqueExercises` returns distinct exercises by name across all workouts
 
 ## Phase 2: Secondary Features
 
